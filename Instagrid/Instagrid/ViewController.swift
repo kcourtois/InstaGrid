@@ -10,9 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var panelImg: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        panelImg.layer.shadowColor = UIColor.black.cgColor
+        panelImg.layer.shadowOffset = CGSize(width: 0, height: 2)
+        panelImg.layer.shadowOpacity = 0.8
     }
 
 
