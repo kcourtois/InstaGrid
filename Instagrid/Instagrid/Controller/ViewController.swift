@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //put shadows behind the image panel
         panelImg.layer.shadowColor = UIColor.black.cgColor
         panelImg.layer.shadowOffset = CGSize(width: 0, height: 2)
         panelImg.layer.shadowOpacity = 0.8
