@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Instagrid
 //
-//  Created by Kévin Courtois on 31/01/2019.
+//  Created by Kévin Courtois on 05/03/2019.
 //  Copyright © 2019 Kévin Courtois. All rights reserved.
 //
 
@@ -19,7 +19,6 @@ class ViewController: UIViewController {
         panelImg.layer.shadowOffset = CGSize(width: 0, height: 2)
         panelImg.layer.shadowOpacity = 0.8
     }
-
 
 }
 
