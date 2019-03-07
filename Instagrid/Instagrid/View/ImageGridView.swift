@@ -22,7 +22,7 @@ class ImageGridView: UIView {
         }
     }
     
-    //Shows/Hides buttons to match the selected layout
+    // Shows/Hides buttons to match the selected layout
     private func setLayout(_ layout:Layouts) {
         switch layout {
             case .Layout1:

@@ -18,6 +18,9 @@
 		9ECDF81222313A30005DE1B1 /* LayoutSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECDF81122313A30005DE1B1 /* LayoutSelectionView.swift */; };
 		9ECDF814223156F6005DE1B1 /* Layouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECDF813223156F6005DE1B1 /* Layouts.swift */; };
 		9ECDF81822315D72005DE1B1 /* SwipeStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECDF81722315D72005DE1B1 /* SwipeStackView.swift */; };
+		9ECDF81A22318F95005DE1B1 /* Layout1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ECDF81922318F95005DE1B1 /* Layout1.xib */; };
+		9ECDF81D2231953C005DE1B1 /* Layout3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ECDF81B2231953C005DE1B1 /* Layout3.xib */; };
+		9ECDF81E2231953C005DE1B1 /* Layout2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ECDF81C2231953C005DE1B1 /* Layout2.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		9ECDF81122313A30005DE1B1 /* LayoutSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutSelectionView.swift; sourceTree = "<group>"; };
 		9ECDF813223156F6005DE1B1 /* Layouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layouts.swift; sourceTree = "<group>"; };
 		9ECDF81722315D72005DE1B1 /* SwipeStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeStackView.swift; sourceTree = "<group>"; };
+		9ECDF81922318F95005DE1B1 /* Layout1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Layout1.xib; sourceTree = "<group>"; };
+		9ECDF81B2231953C005DE1B1 /* Layout3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Layout3.xib; sourceTree = "<group>"; };
+		9ECDF81C2231953C005DE1B1 /* Layout2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Layout2.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,9 @@
 				9E83FAF5223128650010AC2A /* ImageGridView.swift */,
 				9ECDF81122313A30005DE1B1 /* LayoutSelectionView.swift */,
 				9ECDF81722315D72005DE1B1 /* SwipeStackView.swift */,
+				9ECDF81B2231953C005DE1B1 /* Layout3.xib */,
+				9ECDF81C2231953C005DE1B1 /* Layout2.xib */,
+				9ECDF81922318F95005DE1B1 /* Layout1.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,9 +182,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E016E1F222EDE4B00DD4FDA /* LaunchScreen.storyboard in Resources */,
+				9ECDF81A22318F95005DE1B1 /* Layout1.xib in Resources */,
 				9E016E1C222EDE4B00DD4FDA /* Assets.xcassets in Resources */,
 				9E016E29222EE4E900DD4FDA /* ThirstySoftRegular.otf in Resources */,
+				9ECDF81E2231953C005DE1B1 /* Layout2.xib in Resources */,
 				9E016E28222EE4E900DD4FDA /* Delm-Medium.otf in Resources */,
+				9ECDF81D2231953C005DE1B1 /* Layout3.xib in Resources */,
 				9E016E1A222EDE4900DD4FDA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
