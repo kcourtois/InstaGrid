@@ -14,6 +14,10 @@
 		9E016E1F222EDE4B00DD4FDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E016E1D222EDE4B00DD4FDA /* LaunchScreen.storyboard */; };
 		9E016E28222EE4E900DD4FDA /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9E016E26222EE4E900DD4FDA /* Delm-Medium.otf */; };
 		9E016E29222EE4E900DD4FDA /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9E016E27222EE4E900DD4FDA /* ThirstySoftRegular.otf */; };
+		9E83FAF6223128650010AC2A /* ImageGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E83FAF5223128650010AC2A /* ImageGridView.swift */; };
+		9ECDF81222313A30005DE1B1 /* LayoutSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECDF81122313A30005DE1B1 /* LayoutSelectionView.swift */; };
+		9ECDF814223156F6005DE1B1 /* Layouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECDF813223156F6005DE1B1 /* Layouts.swift */; };
+		9ECDF81822315D72005DE1B1 /* SwipeStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECDF81722315D72005DE1B1 /* SwipeStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		9E016E20222EDE4B00DD4FDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E016E26222EE4E900DD4FDA /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
 		9E016E27222EE4E900DD4FDA /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
+		9E83FAF5223128650010AC2A /* ImageGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGridView.swift; sourceTree = "<group>"; };
+		9ECDF81122313A30005DE1B1 /* LayoutSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutSelectionView.swift; sourceTree = "<group>"; };
+		9ECDF813223156F6005DE1B1 /* Layouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layouts.swift; sourceTree = "<group>"; };
+		9ECDF81722315D72005DE1B1 /* SwipeStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +87,9 @@
 			children = (
 				9E016E1D222EDE4B00DD4FDA /* LaunchScreen.storyboard */,
 				9E016E18222EDE4900DD4FDA /* Main.storyboard */,
+				9E83FAF5223128650010AC2A /* ImageGridView.swift */,
+				9ECDF81122313A30005DE1B1 /* LayoutSelectionView.swift */,
+				9ECDF81722315D72005DE1B1 /* SwipeStackView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -86,6 +97,7 @@
 		9E016E2C222EE57F00DD4FDA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9ECDF813223156F6005DE1B1 /* Layouts.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,8 +187,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E83FAF6223128650010AC2A /* ImageGridView.swift in Sources */,
 				9E016E17222EDE4900DD4FDA /* ViewController.swift in Sources */,
+				9ECDF814223156F6005DE1B1 /* Layouts.swift in Sources */,
 				9E016E15222EDE4900DD4FDA /* AppDelegate.swift in Sources */,
+				9ECDF81822315D72005DE1B1 /* SwipeStackView.swift in Sources */,
+				9ECDF81222313A30005DE1B1 /* LayoutSelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
