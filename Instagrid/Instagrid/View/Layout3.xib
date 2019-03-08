@@ -10,49 +10,45 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Layout3" customModule="Instagrid" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="JSl-oH-3i5" userLabel="TopLeft">
-                    <rect key="frame" x="15" y="15.5" width="128" height="128"/>
+                    <rect key="frame" x="15" y="15" width="127.5" height="127.5"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="JSl-oH-3i5" secondAttribute="height" multiplier="1:1" id="sgX-1W-W4y"/>
+                        <constraint firstAttribute="width" secondItem="JSl-oH-3i5" secondAttribute="height" multiplier="1:1" id="2hF-eD-OJc"/>
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="eTp-tK-6K8" userLabel="BotLeft">
-                    <rect key="frame" x="15" y="158.5" width="127.5" height="127.5"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="eTp-tK-6K8" secondAttribute="height" multiplier="1:1" id="4Al-hU-76Q"/>
-                    </constraints>
+                    <rect key="frame" x="15" y="157.5" width="127.5" height="127.5"/>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="tLy-6V-fW9" userLabel="BotRight">
-                    <rect key="frame" x="157.5" y="158.5" width="127.5" height="127.5"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="tLy-6V-fW9" secondAttribute="height" multiplier="1:1" id="JrB-en-vXT"/>
-                    </constraints>
+                    <rect key="frame" x="157.5" y="157.5" width="127.5" height="127.5"/>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="vM9-E1-TAR" userLabel="TopRight">
-                    <rect key="frame" x="156" y="15.5" width="129" height="128"/>
+                    <rect key="frame" x="157.5" y="15" width="127.5" height="127.5"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="0.062745098040000002" green="0.40000000000000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="eTp-tK-6K8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="6dJ-o7-iCV"/>
                 <constraint firstItem="JSl-oH-3i5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="Bmb-tx-sLZ"/>
-                <constraint firstItem="tLy-6V-fW9" firstAttribute="leading" secondItem="eTp-tK-6K8" secondAttribute="trailing" constant="15" id="FeM-Ca-59U"/>
-                <constraint firstItem="tLy-6V-fW9" firstAttribute="top" secondItem="vM9-E1-TAR" secondAttribute="bottom" constant="15" id="HAq-hD-HBX"/>
-                <constraint firstItem="vM9-E1-TAR" firstAttribute="leading" secondItem="JSl-oH-3i5" secondAttribute="trailing" constant="13" id="I6P-Vh-hEa"/>
-                <constraint firstItem="eTp-tK-6K8" firstAttribute="top" secondItem="JSl-oH-3i5" secondAttribute="bottom" constant="15" id="IBR-cb-oTN"/>
+                <constraint firstItem="tLy-6V-fW9" firstAttribute="height" secondItem="JSl-oH-3i5" secondAttribute="height" id="EmL-vz-p1x"/>
+                <constraint firstItem="eTp-tK-6K8" firstAttribute="height" secondItem="JSl-oH-3i5" secondAttribute="height" id="J1k-Zp-Icy"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vM9-E1-TAR" secondAttribute="trailing" constant="15" id="Maq-XT-TkL"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tLy-6V-fW9" secondAttribute="trailing" constant="15" id="NFy-mT-CsK"/>
-                <constraint firstItem="vM9-E1-TAR" firstAttribute="width" secondItem="vM9-E1-TAR" secondAttribute="height" multiplier="1:1" id="O3I-tz-Vbd"/>
+                <constraint firstItem="vM9-E1-TAR" firstAttribute="width" secondItem="JSl-oH-3i5" secondAttribute="width" id="Spc-YP-hvp"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="tLy-6V-fW9" secondAttribute="bottom" constant="15" id="Yrv-N9-nus"/>
+                <constraint firstItem="eTp-tK-6K8" firstAttribute="width" secondItem="JSl-oH-3i5" secondAttribute="width" id="a4q-h1-rKf"/>
                 <constraint firstItem="JSl-oH-3i5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="cpz-y7-PjZ"/>
                 <constraint firstItem="vM9-E1-TAR" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="djz-fv-qIF"/>
+                <constraint firstItem="vM9-E1-TAR" firstAttribute="height" secondItem="JSl-oH-3i5" secondAttribute="height" id="hMs-Gn-bwg"/>
+                <constraint firstItem="eTp-tK-6K8" firstAttribute="top" secondItem="JSl-oH-3i5" secondAttribute="bottom" constant="15" id="jHK-qc-fyo"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="eTp-tK-6K8" secondAttribute="bottom" constant="15" id="ndD-31-tT0"/>
+                <constraint firstItem="tLy-6V-fW9" firstAttribute="width" secondItem="JSl-oH-3i5" secondAttribute="width" id="sh8-uY-CcM"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

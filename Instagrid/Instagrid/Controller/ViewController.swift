@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         updateOrientation()
     }
     
-    @IBAction func layoutOneClicked() {
+    /*@IBAction func layoutOneClicked() {
         setLayout(layout: .Layout1)
     }
     
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
     
     @IBAction func layoutThreeClicked() {
         setLayout(layout: .Layout3)
-    }
+    }*/
     
     //Changes layout for imageGridView and layoutSelectionView
     func setLayout(layout: Layouts) {

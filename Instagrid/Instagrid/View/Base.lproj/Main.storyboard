@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="landscape">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -23,101 +23,20 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text=" Instagrid " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9LI-j0-0sr">
-                                <rect key="frame" x="217.5" y="5" width="133.5" height="39"/>
+                                <rect key="frame" x="121" y="45" width="133.5" height="35"/>
                                 <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1I1-Ku-aT3" userLabel="PanelImg" customClass="ImageGridView" customModule="Instagrid" customModuleProvider="target">
-                                <rect key="frame" x="173" y="49" width="222" height="222"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5s-5R-xYs" userLabel="Top">
-                                        <rect key="frame" x="15" y="15" width="192" height="88.5"/>
-                                        <state key="normal" backgroundImage="Plus"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mU9-Fh-hlj" userLabel="Bottom">
-                                        <rect key="frame" x="15" y="118.5" width="192" height="88.5"/>
-                                        <state key="normal" backgroundImage="Plus"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8T6-Aj-giP" userLabel="TopLeft">
-                                        <rect key="frame" x="15" y="15" width="88.5" height="88.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="8T6-Aj-giP" secondAttribute="height" multiplier="1:1" id="hc4-lL-Cty"/>
-                                        </constraints>
-                                        <state key="normal" backgroundImage="SquarePlus"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="imageView.contentMode">
-                                                <integer key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qP7-aR-vjQ" userLabel="TopRight">
-                                        <rect key="frame" x="118.5" y="15" width="88.5" height="88.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="qP7-aR-vjQ" secondAttribute="height" multiplier="1:1" id="jPD-bT-h6z"/>
-                                        </constraints>
-                                        <state key="normal" backgroundImage="SquarePlus"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="imageView.contentMode">
-                                                <integer key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JTn-jY-2e6" userLabel="BotRight">
-                                        <rect key="frame" x="118.5" y="118.5" width="88.5" height="88.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="JTn-jY-2e6" secondAttribute="height" multiplier="1:1" id="axH-tH-Lte"/>
-                                        </constraints>
-                                        <state key="normal" backgroundImage="SquarePlus"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="imageView.contentMode">
-                                                <integer key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKD-qw-71E" userLabel="BotLeft">
-                                        <rect key="frame" x="15" y="118.5" width="88.5" height="88.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="eKD-qw-71E" secondAttribute="height" multiplier="1:1" id="PPQ-Zc-LUu"/>
-                                        </constraints>
-                                        <state key="normal" backgroundImage="SquarePlus"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="imageView.contentMode">
-                                                <integer key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.062745098040000002" green="0.40000000000000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1I1-Ku-aT3" userLabel="ImageGrid" customClass="Layout1" customModule="Instagrid" customModuleProvider="target">
+                                <rect key="frame" x="30" y="204" width="315" height="315"/>
                                 <constraints>
-                                    <constraint firstItem="qP7-aR-vjQ" firstAttribute="trailing" secondItem="M5s-5R-xYs" secondAttribute="trailing" id="1iI-r1-ncj"/>
-                                    <constraint firstItem="M5s-5R-xYs" firstAttribute="width" secondItem="mU9-Fh-hlj" secondAttribute="width" id="649-a2-OOQ"/>
-                                    <constraint firstItem="eKD-qw-71E" firstAttribute="height" secondItem="mU9-Fh-hlj" secondAttribute="height" id="8mQ-Yh-Xwj"/>
                                     <constraint firstAttribute="width" secondItem="1I1-Ku-aT3" secondAttribute="height" multiplier="1:1" id="CDb-r7-azJ"/>
-                                    <constraint firstItem="M5s-5R-xYs" firstAttribute="top" secondItem="1I1-Ku-aT3" secondAttribute="top" constant="15" id="Cbn-q9-bI6"/>
-                                    <constraint firstItem="8T6-Aj-giP" firstAttribute="height" secondItem="M5s-5R-xYs" secondAttribute="height" id="Elk-o6-OPe"/>
-                                    <constraint firstAttribute="trailing" secondItem="mU9-Fh-hlj" secondAttribute="trailing" constant="15" id="Fng-Cz-ezB"/>
-                                    <constraint firstItem="M5s-5R-xYs" firstAttribute="leading" secondItem="1I1-Ku-aT3" secondAttribute="leading" constant="15" id="LCY-c6-S0A"/>
-                                    <constraint firstItem="mU9-Fh-hlj" firstAttribute="top" secondItem="M5s-5R-xYs" secondAttribute="bottom" constant="15" id="MC5-qi-X0e"/>
-                                    <constraint firstItem="JTn-jY-2e6" firstAttribute="trailing" secondItem="mU9-Fh-hlj" secondAttribute="trailing" id="VJ4-DX-udD"/>
-                                    <constraint firstItem="qP7-aR-vjQ" firstAttribute="centerY" secondItem="M5s-5R-xYs" secondAttribute="centerY" id="VWC-0M-jYU"/>
-                                    <constraint firstItem="qP7-aR-vjQ" firstAttribute="height" secondItem="M5s-5R-xYs" secondAttribute="height" id="ZQE-hp-091"/>
-                                    <constraint firstItem="JTn-jY-2e6" firstAttribute="centerY" secondItem="mU9-Fh-hlj" secondAttribute="centerY" id="a43-9c-YHM"/>
-                                    <constraint firstItem="eKD-qw-71E" firstAttribute="centerY" secondItem="mU9-Fh-hlj" secondAttribute="centerY" id="cJR-zg-lJB"/>
-                                    <constraint firstAttribute="trailing" secondItem="M5s-5R-xYs" secondAttribute="trailing" constant="15" id="cey-3A-edY"/>
-                                    <constraint firstItem="JTn-jY-2e6" firstAttribute="height" secondItem="mU9-Fh-hlj" secondAttribute="height" id="haR-tr-CnT"/>
-                                    <constraint firstItem="8T6-Aj-giP" firstAttribute="centerY" secondItem="M5s-5R-xYs" secondAttribute="centerY" id="iMf-gg-tOX"/>
-                                    <constraint firstItem="mU9-Fh-hlj" firstAttribute="top" secondItem="M5s-5R-xYs" secondAttribute="bottom" constant="15" id="k3J-Ch-s2a"/>
-                                    <constraint firstItem="M5s-5R-xYs" firstAttribute="height" secondItem="mU9-Fh-hlj" secondAttribute="height" id="pHi-7z-OiO"/>
-                                    <constraint firstItem="8T6-Aj-giP" firstAttribute="leading" secondItem="M5s-5R-xYs" secondAttribute="leading" id="pnj-it-vVc"/>
-                                    <constraint firstItem="mU9-Fh-hlj" firstAttribute="leading" secondItem="1I1-Ku-aT3" secondAttribute="leading" constant="15" id="qoZ-Lc-3aB"/>
-                                    <constraint firstItem="eKD-qw-71E" firstAttribute="leading" secondItem="mU9-Fh-hlj" secondAttribute="leading" id="skV-jq-4sm"/>
                                     <constraint firstAttribute="width" secondItem="1I1-Ku-aT3" secondAttribute="height" multiplier="1:1" id="wzl-dy-IQm"/>
-                                    <constraint firstAttribute="bottom" secondItem="mU9-Fh-hlj" secondAttribute="bottom" constant="15" id="zQ6-OT-qTR"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -130,63 +49,46 @@
                                         <exclude reference="wzl-dy-IQm"/>
                                     </mask>
                                 </variation>
-                                <connections>
-                                    <outlet property="botButton" destination="mU9-Fh-hlj" id="XPY-xp-3Gu"/>
-                                    <outlet property="botLeftButton" destination="eKD-qw-71E" id="k3G-9t-OLa"/>
-                                    <outlet property="botRightButton" destination="JTn-jY-2e6" id="JZt-GP-Yd7"/>
-                                    <outlet property="topButton" destination="M5s-5R-xYs" id="ja3-m1-4i8"/>
-                                    <outlet property="topLeftButton" destination="8T6-Aj-giP" id="Nih-I7-m0g"/>
-                                    <outlet property="topRightButton" destination="qP7-aR-vjQ" id="xuj-IB-N4c"/>
-                                </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xmn-ZA-oqa" userLabel="SelectorsContainer" customClass="LayoutSelectionView" customModule="Instagrid" customModuleProvider="target">
-                                <rect key="frame" x="395" y="49" width="173" height="222"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xmn-ZA-oqa" userLabel="LayoutSelection" customClass="LayoutSelectionView" customModule="Instagrid" customModuleProvider="target">
+                                <rect key="frame" x="30" y="519" width="315" height="148"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="GaS-3l-ULU">
-                                        <rect key="frame" x="62" y="17.5" width="49" height="187"/>
+                                        <rect key="frame" x="17.5" y="34" width="280" height="80"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Layout 1" translatesAutoresizingMaskIntoConstraints="NO" id="FYU-bP-hYU" userLabel="Layout1_Img">
-                                                <rect key="frame" x="0.0" y="0.0" width="49" height="49"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="FYU-bP-hYU" secondAttribute="height" multiplier="1:1" id="esR-fJ-rst"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Layout 2" translatesAutoresizingMaskIntoConstraints="NO" id="p8w-x6-BZV" userLabel="Layout2_Img">
-                                                <rect key="frame" x="0.0" y="69" width="49" height="49"/>
+                                                <rect key="frame" x="100" y="0.0" width="80" height="80"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Layout 3" translatesAutoresizingMaskIntoConstraints="NO" id="IQJ-Zn-54i" userLabel="Layout3_Img">
-                                                <rect key="frame" x="0.0" y="138" width="49" height="49"/>
+                                                <rect key="frame" x="200" y="0.0" width="80" height="80"/>
                                             </imageView>
                                         </subviews>
                                         <variation key="heightClass=compact-widthClass=compact" axis="vertical"/>
                                         <variation key="heightClass=compact-widthClass=regular" axis="vertical"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PUN-AJ-J9M">
-                                        <rect key="frame" x="62" y="17.5" width="49" height="187"/>
+                                        <rect key="frame" x="17.5" y="34" width="280" height="80"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uM-7L-hdF" userLabel="Layout1_Button">
-                                                <rect key="frame" x="0.0" y="0.0" width="49" height="49"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="5uM-7L-hdF" secondAttribute="height" multiplier="1:1" id="PQm-FJ-jGg"/>
                                                 </constraints>
                                                 <state key="normal" backgroundImage="Selected"/>
-                                                <connections>
-                                                    <action selector="layoutOneClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="iAq-gY-5IH"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCK-jN-jJ6" userLabel="Layout2_Button">
-                                                <rect key="frame" x="0.0" y="69" width="49" height="49"/>
+                                                <rect key="frame" x="100" y="0.0" width="80" height="80"/>
                                                 <state key="normal" backgroundImage="Selected"/>
-                                                <connections>
-                                                    <action selector="layoutTwoClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Cc-P4-kFQ"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zsr-dT-izm" userLabel="Layout3_Button">
-                                                <rect key="frame" x="0.0" y="138" width="49" height="49"/>
+                                                <rect key="frame" x="200" y="0.0" width="80" height="80"/>
                                                 <state key="normal" backgroundImage="Selected"/>
-                                                <connections>
-                                                    <action selector="layoutThreeClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="g04-WL-a0m"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                         <variation key="heightClass=compact-widthClass=compact" axis="vertical"/>
@@ -228,22 +130,22 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <outlet property="Layout1_Button" destination="5uM-7L-hdF" id="5Lg-ge-GUa"/>
-                                    <outlet property="Layout2_Button" destination="VCK-jN-jJ6" id="vTa-Aw-qeW"/>
-                                    <outlet property="Layout3_Button" destination="Zsr-dT-izm" id="8Yz-F6-3Lg"/>
+                                    <outlet property="Layout1_Button" destination="5uM-7L-hdF" id="6cf-55-REd"/>
+                                    <outlet property="Layout2_Button" destination="VCK-jN-jJ6" id="ugB-rL-8ts"/>
+                                    <outlet property="Layout3_Button" destination="Zsr-dT-izm" id="5UP-QU-StR"/>
                                 </connections>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="GID-tp-3YL" userLabel="SwipeStack" customClass="SwipeStackView" customModule="Instagrid" customModuleProvider="target">
-                                <rect key="frame" x="5" y="136.5" width="163" height="47"/>
+                                <rect key="frame" x="30" y="150.5" width="315" height="48.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowUp" translatesAutoresizingMaskIntoConstraints="NO" id="6R8-GW-kNU">
-                                        <rect key="frame" x="0.0" y="0.0" width="163" height="15"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="15" id="XBI-ru-qTY"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D64-yn-qk3">
-                                        <rect key="frame" x="0.0" y="18" width="163" height="29"/>
+                                        <rect key="frame" x="0.0" y="18" width="315" height="30.5"/>
                                         <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="26"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -391,9 +293,7 @@
         <image name="Layout 1" width="80" height="80"/>
         <image name="Layout 2" width="80" height="80"/>
         <image name="Layout 3" width="80" height="80"/>
-        <image name="Plus" width="270" height="128"/>
         <image name="Selected" width="80" height="80"/>
-        <image name="SquarePlus" width="96" height="96"/>
         <image name="arrowUp" width="15" height="10"/>
     </resources>
 </document>
