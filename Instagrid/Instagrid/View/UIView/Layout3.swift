@@ -1,5 +1,5 @@
 //
-//  Layout1.swift
+//  Layout3.swift
 //  Instagrid
 //
 //  Created by Kévin Courtois on 07/03/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Layout1: UIView {
+class Layout3: UIView {
 
     @IBOutlet var contentView: UIView!
     
@@ -24,7 +24,7 @@ class Layout1: UIView {
     
     private func commonInit() {
         //Load xib by name
-        Bundle.main.loadNibNamed("Layout1", owner: self, options: nil)
+        Bundle.main.loadNibNamed("Layout3", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]

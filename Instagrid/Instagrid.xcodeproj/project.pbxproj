@@ -97,17 +97,11 @@
 		9E016E2B222EE57C00DD4FDA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9E016E1D222EDE4B00DD4FDA /* LaunchScreen.storyboard */,
-				9ECDF81F2231B11D005DE1B1 /* Layout1.swift */,
-				9ECDF8212231B129005DE1B1 /* Layout2.swift */,
-				9ECDF8232231B134005DE1B1 /* Layout3.swift */,
-				9E016E18222EDE4900DD4FDA /* Main.storyboard */,
-				9E83FAF5223128650010AC2A /* ImageGridView.swift */,
+				9ECDF8272232CB27005DE1B1 /* Xib */,
+				9ECDF8262232CAF9005DE1B1 /* Storyboard */,
+				9ECDF8252232CAE5005DE1B1 /* UIView */,
 				9ECDF81122313A30005DE1B1 /* LayoutSelectionView.swift */,
 				9ECDF81722315D72005DE1B1 /* SwipeStackView.swift */,
-				9ECDF81B2231953C005DE1B1 /* Layout3.xib */,
-				9ECDF81C2231953C005DE1B1 /* Layout2.xib */,
-				9ECDF81922318F95005DE1B1 /* Layout1.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -130,6 +124,36 @@
 				9E016E14222EDE4900DD4FDA /* AppDelegate.swift */,
 			);
 			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		9ECDF8252232CAE5005DE1B1 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				9E83FAF5223128650010AC2A /* ImageGridView.swift */,
+				9ECDF81F2231B11D005DE1B1 /* Layout1.swift */,
+				9ECDF8212231B129005DE1B1 /* Layout2.swift */,
+				9ECDF8232231B134005DE1B1 /* Layout3.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		9ECDF8262232CAF9005DE1B1 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				9E016E18222EDE4900DD4FDA /* Main.storyboard */,
+				9E016E1D222EDE4B00DD4FDA /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		9ECDF8272232CB27005DE1B1 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				9ECDF81B2231953C005DE1B1 /* Layout3.xib */,
+				9ECDF81C2231953C005DE1B1 /* Layout2.xib */,
+				9ECDF81922318F95005DE1B1 /* Layout1.xib */,
+			);
+			path = Xib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

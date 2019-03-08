@@ -20,11 +20,21 @@ class ImageGridView: UIView {
     private func setLayout(_ layout:Layouts) {
         switch layout {
             case .Layout1:
-                print("l1")
+                removeSubviews()
+                addSubview(Layout1(frame: bounds))
             case .Layout2:
-                print("l2")
+                removeSubviews()
+                addSubview(Layout2(frame: bounds))
             case .Layout3:
-                print("l3")
+                removeSubviews()
+                addSubview(Layout3(frame: bounds))
+        }
+    }
+    
+    //func to remove all subviews in ImageGridView
+    private func removeSubviews() {
+        for subView in subviews {
+            subView.removeFromSuperview()
         }
     }
 }

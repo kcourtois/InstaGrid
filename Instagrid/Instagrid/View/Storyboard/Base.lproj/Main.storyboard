@@ -27,12 +27,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text=" Instagrid " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9LI-j0-0sr">
-                                <rect key="frame" x="121" y="45" width="133.5" height="35"/>
+                                <rect key="frame" x="121" y="45" width="133.5" height="39"/>
                                 <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1I1-Ku-aT3" userLabel="ImageGrid" customClass="Layout1" customModule="Instagrid" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1I1-Ku-aT3" userLabel="ImageGrid" customClass="ImageGridView" customModule="Instagrid" customModuleProvider="target">
                                 <rect key="frame" x="30" y="204" width="315" height="315"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1I1-Ku-aT3" secondAttribute="height" multiplier="1:1" id="CDb-r7-azJ"/>
@@ -81,14 +81,23 @@
                                                     <constraint firstAttribute="width" secondItem="5uM-7L-hdF" secondAttribute="height" multiplier="1:1" id="PQm-FJ-jGg"/>
                                                 </constraints>
                                                 <state key="normal" backgroundImage="Selected"/>
+                                                <connections>
+                                                    <action selector="layoutOneClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="6DE-PM-ice"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCK-jN-jJ6" userLabel="Layout2_Button">
                                                 <rect key="frame" x="100" y="0.0" width="80" height="80"/>
                                                 <state key="normal" backgroundImage="Selected"/>
+                                                <connections>
+                                                    <action selector="layoutTwoClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="m6S-Hf-5ub"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zsr-dT-izm" userLabel="Layout3_Button">
                                                 <rect key="frame" x="200" y="0.0" width="80" height="80"/>
                                                 <state key="normal" backgroundImage="Selected"/>
+                                                <connections>
+                                                    <action selector="layoutThreeClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="PFl-v5-fh9"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <variation key="heightClass=compact-widthClass=compact" axis="vertical"/>
@@ -136,7 +145,7 @@
                                 </connections>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="GID-tp-3YL" userLabel="SwipeStack" customClass="SwipeStackView" customModule="Instagrid" customModuleProvider="target">
-                                <rect key="frame" x="30" y="150.5" width="315" height="48.5"/>
+                                <rect key="frame" x="30" y="152" width="315" height="47"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowUp" translatesAutoresizingMaskIntoConstraints="NO" id="6R8-GW-kNU">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="15"/>
@@ -145,7 +154,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D64-yn-qk3">
-                                        <rect key="frame" x="0.0" y="18" width="315" height="30.5"/>
+                                        <rect key="frame" x="0.0" y="18" width="315" height="29"/>
                                         <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="26"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>

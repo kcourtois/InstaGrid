@@ -20,6 +20,9 @@ class ViewController: UIViewController {
         imageGridView.layer.shadowColor = UIColor.black.cgColor
         imageGridView.layer.shadowOffset = CGSize(width: 0, height: 2)
         imageGridView.layer.shadowOpacity = 0.8
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         //Sets view to layout 1
         setLayout(layout: .Layout1)
     }
@@ -28,7 +31,7 @@ class ViewController: UIViewController {
         updateOrientation()
     }
     
-    /*@IBAction func layoutOneClicked() {
+    @IBAction func layoutOneClicked() {
         setLayout(layout: .Layout1)
     }
     
@@ -38,7 +41,7 @@ class ViewController: UIViewController {
     
     @IBAction func layoutThreeClicked() {
         setLayout(layout: .Layout3)
-    }*/
+    }
     
     //Changes layout for imageGridView and layoutSelectionView
     func setLayout(layout: Layouts) {
