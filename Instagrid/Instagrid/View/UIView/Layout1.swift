@@ -11,6 +11,9 @@ import UIKit
 class Layout1: UIView {
 
     @IBOutlet var contentView: UIView!
+    @IBOutlet weak var topImageView: UIImageView!
+    @IBOutlet weak var botLeftImageView: UIImageView!
+    @IBOutlet weak var botRightImageView: UIImageView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)

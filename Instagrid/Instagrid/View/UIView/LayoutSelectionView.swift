@@ -36,4 +36,21 @@ class LayoutSelectionView: UIView {
             Layout3_Button.setBackgroundImage(#imageLiteral(resourceName: "Selected"), for: .normal);
         }
     }
+    
+    @IBAction func layoutOneClicked() {
+        postNotification(layout: .Layout1)
+    }
+    
+    @IBAction func layoutTwoClicked() {
+        postNotification(layout: .Layout2)
+    }
+    
+    @IBAction func layoutThreeClicked() {
+        postNotification(layout: .Layout3)
+    }
+    
+    private func postNotification(layout:Layouts) {
+        let name = Notification.Name(rawValue: "didSelectLayout")
+        NotificationCenter.default.post(name: name, object: nil, userInfo: ["layout": layout])
+    }
 }

@@ -82,21 +82,21 @@
                                                 </constraints>
                                                 <state key="normal" backgroundImage="Selected"/>
                                                 <connections>
-                                                    <action selector="layoutOneClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="6DE-PM-ice"/>
+                                                    <action selector="layoutOneClicked" destination="Xmn-ZA-oqa" eventType="touchUpInside" id="9O4-Ht-ued"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCK-jN-jJ6" userLabel="Layout2_Button">
                                                 <rect key="frame" x="100" y="0.0" width="80" height="80"/>
                                                 <state key="normal" backgroundImage="Selected"/>
                                                 <connections>
-                                                    <action selector="layoutTwoClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="m6S-Hf-5ub"/>
+                                                    <action selector="layoutTwoClicked" destination="Xmn-ZA-oqa" eventType="touchUpInside" id="feg-Er-jmI"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zsr-dT-izm" userLabel="Layout3_Button">
                                                 <rect key="frame" x="200" y="0.0" width="80" height="80"/>
                                                 <state key="normal" backgroundImage="Selected"/>
                                                 <connections>
-                                                    <action selector="layoutThreeClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="PFl-v5-fh9"/>
+                                                    <action selector="layoutThreeClicked" destination="Xmn-ZA-oqa" eventType="touchUpInside" id="GOq-jf-FHO"/>
                                                 </connections>
                                             </button>
                                         </subviews>

@@ -100,7 +100,6 @@
 				9ECDF8272232CB27005DE1B1 /* Xib */,
 				9ECDF8262232CAF9005DE1B1 /* Storyboard */,
 				9ECDF8252232CAE5005DE1B1 /* UIView */,
-				9ECDF81122313A30005DE1B1 /* LayoutSelectionView.swift */,
 				9ECDF81722315D72005DE1B1 /* SwipeStackView.swift */,
 			);
 			path = View;
@@ -129,6 +128,7 @@
 		9ECDF8252232CAE5005DE1B1 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				9ECDF81122313A30005DE1B1 /* LayoutSelectionView.swift */,
 				9E83FAF5223128650010AC2A /* ImageGridView.swift */,
 				9ECDF81F2231B11D005DE1B1 /* Layout1.swift */,
 				9ECDF8212231B129005DE1B1 /* Layout2.swift */,

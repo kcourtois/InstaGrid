@@ -11,6 +11,10 @@ import UIKit
 class Layout3: UIView {
 
     @IBOutlet var contentView: UIView!
+    @IBOutlet weak var topLeftImageView: UIImageView!
+    @IBOutlet weak var topRightImageView: UIImageView!
+    @IBOutlet weak var botLeftImageView: UIImageView!
+    @IBOutlet weak var botRightImageView: UIImageView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)

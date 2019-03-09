@@ -25,28 +25,31 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         //Sets view to layout 1
         setLayout(layout: .Layout1)
+        
+        //Notification observer
+        let name = Notification.Name(rawValue: "didSelectLayout")
+        NotificationCenter.default.addObserver(self, selector: #selector(onDidSelectLayout(_:)), name: name, object: nil)
     }
     
     override func viewWillLayoutSubviews() {
         updateOrientation()
     }
     
-    @IBAction func layoutOneClicked() {
-        setLayout(layout: .Layout1)
-    }
-    
-    @IBAction func layoutTwoClicked() {
-        setLayout(layout: .Layout2)
-    }
-    
-    @IBAction func layoutThreeClicked() {
-        setLayout(layout: .Layout3)
-    }
-    
     //Changes layout for imageGridView and layoutSelectionView
     func setLayout(layout: Layouts) {
         imageGridView.layout = layout
         layoutSelectionView.layout = layout
+    }
+    
+    //Triggers on notification didSelectLayout
+    @objc func onDidSelectLayout(_ notification:Notification) {
+        if let data = notification.userInfo as? [String: Layouts]
+        {
+            for (_, layout) in data
+            {
+                setLayout(layout: layout)
+            }
+        }
     }
     
     //Updates swipeStackView's orientation

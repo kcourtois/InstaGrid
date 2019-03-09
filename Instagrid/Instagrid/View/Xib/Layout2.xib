@@ -12,7 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Layout2" customModule="Instagrid" customModuleProvider="target">
             <connections>
+                <outlet property="botImageView" destination="eTp-tK-6K8" id="TfJ-EM-AUp"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="NOU-Qz-88D"/>
+                <outlet property="topLeftImageView" destination="YcL-4M-pwd" id="b9u-uQ-G6i"/>
+                <outlet property="topRightImageView" destination="Ah3-6q-jx7" id="51o-rj-Kr3"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
