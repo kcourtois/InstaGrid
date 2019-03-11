@@ -23,20 +23,32 @@
             <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="eTp-tK-6K8" userLabel="Bottom">
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="eTp-tK-6K8" userLabel="Bottom">
                     <rect key="frame" x="15" y="157.5" width="270" height="127.5"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="FwL-6C-fwx" appends="YES" id="86t-fu-Mcb"/>
+                    </connections>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="YcL-4M-pwd" userLabel="TopLeft">
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="YcL-4M-pwd" userLabel="TopLeft">
                     <rect key="frame" x="15" y="15" width="127.5" height="127.5"/>
+                    <gestureRecognizers/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="YcL-4M-pwd" secondAttribute="height" multiplier="1:1" id="qSk-Yk-F10"/>
                     </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="bqL-Ah-dD5" appends="YES" id="Xrt-jg-qya"/>
+                    </connections>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="Ah3-6q-jx7" userLabel="TopRight">
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="Ah3-6q-jx7" userLabel="TopRight">
                     <rect key="frame" x="157.5" y="15" width="127.5" height="127.5"/>
+                    <gestureRecognizers/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Ah3-6q-jx7" secondAttribute="height" multiplier="1:1" id="Kh4-XB-mqQ"/>
                     </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="fhu-yA-S5v" appends="YES" id="fe2-Pe-a1B"/>
+                    </connections>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="0.062745098040000002" green="0.40000000000000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -56,6 +68,21 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="-38.399999999999999" y="236.58170914542731"/>
         </view>
+        <tapGestureRecognizer id="bqL-Ah-dD5" userLabel="Tap Gesture Recognizer TOPLEFT">
+            <connections>
+                <action selector="topLeftViewTap:" destination="-1" id="dSj-PB-VE2"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="fhu-yA-S5v" userLabel="Tap Gesture Recognizer TOPRIGHT">
+            <connections>
+                <action selector="topRightViewTap:" destination="-1" id="4EI-6r-1Nx"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="FwL-6C-fwx" userLabel="Tap Gesture Recognizer BOT">
+            <connections>
+                <action selector="botViewTap:" destination="-1" id="gdj-rZ-5t8"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="Plus" width="270" height="128"/>

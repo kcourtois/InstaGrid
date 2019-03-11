@@ -24,20 +24,36 @@
             <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="JSl-oH-3i5" userLabel="TopLeft">
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="JSl-oH-3i5" userLabel="TopLeft">
                     <rect key="frame" x="15" y="15" width="127.5" height="127.5"/>
+                    <gestureRecognizers/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="JSl-oH-3i5" secondAttribute="height" multiplier="1:1" id="2hF-eD-OJc"/>
                     </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="7te-Ku-r0j" appends="YES" id="G2C-uc-DYn"/>
+                    </connections>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="eTp-tK-6K8" userLabel="BotLeft">
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="eTp-tK-6K8" userLabel="BotLeft">
                     <rect key="frame" x="15" y="157.5" width="127.5" height="127.5"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="6ke-Sx-4zS" appends="YES" id="ZUb-em-wNn"/>
+                    </connections>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="tLy-6V-fW9" userLabel="BotRight">
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="tLy-6V-fW9" userLabel="BotRight">
                     <rect key="frame" x="157.5" y="157.5" width="127.5" height="127.5"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="rMa-Hb-gzS" appends="YES" id="gNS-Me-BKa"/>
+                    </connections>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="vM9-E1-TAR" userLabel="TopRight">
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="vM9-E1-TAR" userLabel="TopRight">
                     <rect key="frame" x="157.5" y="15" width="127.5" height="127.5"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="60G-9g-pav" appends="YES" id="t3p-F7-0o9"/>
+                    </connections>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="0.062745098040000002" green="0.40000000000000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -62,6 +78,26 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="-38.399999999999999" y="236.58170914542731"/>
         </view>
+        <tapGestureRecognizer id="7te-Ku-r0j" userLabel="Tap Gesture Recognizer TOPLEFT">
+            <connections>
+                <action selector="topLeftViewTap:" destination="-1" id="kYb-DG-0bl"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="60G-9g-pav" userLabel="Tap Gesture Recognizer TOPRIGHT">
+            <connections>
+                <action selector="topRightViewTap:" destination="-1" id="YWT-UE-rSr"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="6ke-Sx-4zS" userLabel="Tap Gesture Recognizer BOTLEFT">
+            <connections>
+                <action selector="botLeftViewTap:" destination="-1" id="Rem-3h-r0A"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="rMa-Hb-gzS" userLabel="Tap Gesture Recognizer BOTRIGHT">
+            <connections>
+                <action selector="botRightViewTap:" destination="-1" id="msH-Es-zoB"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="Plus" width="270" height="128"/>

@@ -24,6 +24,7 @@
 		9ECDF8202231B11D005DE1B1 /* Layout1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECDF81F2231B11D005DE1B1 /* Layout1.swift */; };
 		9ECDF8222231B129005DE1B1 /* Layout2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECDF8212231B129005DE1B1 /* Layout2.swift */; };
 		9ECDF8242231B134005DE1B1 /* Layout3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECDF8232231B134005DE1B1 /* Layout3.swift */; };
+		9ECDF82B22341925005DE1B1 /* StandardLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECDF82A22341925005DE1B1 /* StandardLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		9ECDF81F2231B11D005DE1B1 /* Layout1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout1.swift; sourceTree = "<group>"; };
 		9ECDF8212231B129005DE1B1 /* Layout2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout2.swift; sourceTree = "<group>"; };
 		9ECDF8232231B134005DE1B1 /* Layout3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout3.swift; sourceTree = "<group>"; };
+		9ECDF82A22341925005DE1B1 /* StandardLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				9ECDF81F2231B11D005DE1B1 /* Layout1.swift */,
 				9ECDF8212231B129005DE1B1 /* Layout2.swift */,
 				9ECDF8232231B134005DE1B1 /* Layout3.swift */,
+				9ECDF82A22341925005DE1B1 /* StandardLayout.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			files = (
 				9ECDF8222231B129005DE1B1 /* Layout2.swift in Sources */,
 				9E83FAF6223128650010AC2A /* ImageGridView.swift in Sources */,
+				9ECDF82B22341925005DE1B1 /* StandardLayout.swift in Sources */,
 				9E016E17222EDE4900DD4FDA /* ViewController.swift in Sources */,
 				9ECDF814223156F6005DE1B1 /* Layouts.swift in Sources */,
 				9ECDF8202231B11D005DE1B1 /* Layout1.swift in Sources */,

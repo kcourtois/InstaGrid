@@ -29,6 +29,12 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We need this permission to pick an image.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>We need this permission to pick an image.</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>We need this permission to pick an image.</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

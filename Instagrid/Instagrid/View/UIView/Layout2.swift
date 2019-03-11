@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Layout2: UIView {
+class Layout2: UIView, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var topLeftImageView: UIImageView!
@@ -32,5 +32,16 @@ class Layout2: UIView {
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
-
+    
+    @IBAction func botViewTap(_ sender: Any) {
+        //changeImage(imageView: botImageView)
+    }
+    
+    @IBAction func topLeftViewTap(_ sender: Any) {
+        //changeImage(imageView: topLeftImageView)
+    }
+    
+    @IBAction func topRightViewTap(_ sender: Any) {
+        //changeImage(imageView: topRightImageView)
+    }
 }

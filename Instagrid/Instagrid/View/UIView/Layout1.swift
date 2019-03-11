@@ -8,28 +8,35 @@
 
 import UIKit
 
-class Layout1: UIView {
+class Layout1: StandardLayout {
 
     @IBOutlet var contentView: UIView!
-    @IBOutlet weak var topImageView: UIImageView!
-    @IBOutlet weak var botLeftImageView: UIImageView!
-    @IBOutlet weak var botRightImageView: UIImageView!
+    @IBOutlet var images:[UIImageView]!
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        commonInit()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        commonInit()
-    }
-    
-    private func commonInit() {
-        //Load xib by name
-        Bundle.main.loadNibNamed("Layout1", owner: self, options: nil)
+    override func commonInit() {
+        super.commonInit()
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+    }
+    
+    @IBAction func topViewTap(_ sender: Any) {
+        changeImage(lastTappedImage: 0)
+    }
+    
+    @IBAction func botLeftViewTap(_ sender: Any) {
+        changeImage(lastTappedImage: 1)
+    }
+    
+    @IBAction func botRightViewTap(_ sender: Any) {
+        changeImage(lastTappedImage: 2)
+    }
+    
+    
+    @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[.originalImage] as? UIImage {
+            images[lastTappedImage].image = image
+        }
+        picker.dismiss(animated: true, completion: nil)
     }
 }
