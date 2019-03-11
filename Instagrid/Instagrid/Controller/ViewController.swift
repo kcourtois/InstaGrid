@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         //Sets view to layout 1
-        setLayout(layout: .Layout1)
+        //setLayout(layout: .Layout1)
         
         //Notification observer for didSelectLayout
         let nameSelectNotif = Notification.Name(rawValue: "didSelectLayout")
@@ -83,7 +83,6 @@ class ViewController: UIViewController {
     
     private func showImagePicker(delegate:StandardLayout) {
         let image = UIImagePickerController()
-        
         image.sourceType = .photoLibrary
         image.allowsEditing = false
         self.present(image, animated: true, completion: {
