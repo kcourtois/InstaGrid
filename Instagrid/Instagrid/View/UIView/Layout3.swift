@@ -18,24 +18,8 @@ class Layout3: StandardLayout {
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        initTapGesures(images: images)
     }
-    
-    @IBAction func topLeftViewTap(_ sender: Any) {
-        changeImage(lastTappedImage: 0)
-    }
-    
-    @IBAction func botLeftViewTap(_ sender: Any) {
-        changeImage(lastTappedImage: 1)
-    }
-    
-    @IBAction func botRightViewTap(_ sender: Any) {
-        changeImage(lastTappedImage: 2)
-    }
-    
-    @IBAction func topRightViewTap(_ sender: Any) {
-        changeImage(lastTappedImage: 3)
-    }
-    
     
     @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[.originalImage] as? UIImage {

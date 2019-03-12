@@ -28,17 +28,26 @@ class StandardLayout: UIView, UINavigationControllerDelegate, UIImagePickerContr
         Bundle.main.loadNibNamed(selfName(), owner: self, options: nil)
     }
     
-    //Get class name and turn it to a string
-    func selfName()->String{
-        let thisType = type(of: self)
-        return String(describing: thisType)
+    //Adds tap gestures to imageViews in array
+    func initTapGesures(images:[UIImageView]) {
+        for imageView in images {
+            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imgViewTapped(sender:)))
+            imageView.addGestureRecognizer(tapGestureRecognizer)
+        }
     }
     
-    //stores last tapped image index and post notification to the controller
-    func changeImage(lastTappedImage: Int) {
-        self.lastTappedImage = lastTappedImage
-        let name = Notification.Name(rawValue: "didTapImage")
-        NotificationCenter.default.post(name: name, object: nil, userInfo: ["layout": self])
+    @objc private func imgViewTapped(sender: UITapGestureRecognizer) {
+        if let view = sender.view {
+            lastTappedImage = view.tag
+            let name = Notification.Name(rawValue: "didTapImage")
+            NotificationCenter.default.post(name: name, object: nil, userInfo: ["layout": self])
+        }
+    }
+    
+    //Get class name and turn it to a string
+    private func selfName()->String{
+        let thisType = type(of: self)
+        return String(describing: thisType)
     }
 
     //Handles the picker dismiss when user taps Cancel
