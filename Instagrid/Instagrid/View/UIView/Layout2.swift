@@ -8,40 +8,35 @@
 
 import UIKit
 
-class Layout2: UIView, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class Layout2: StandardLayout {
 
     @IBOutlet var contentView: UIView!
-    @IBOutlet weak var topLeftImageView: UIImageView!
-    @IBOutlet weak var topRightImageView: UIImageView!
-    @IBOutlet weak var botImageView: UIImageView!
+    @IBOutlet var images:[UIImageView]!
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        commonInit()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        commonInit()
-    }
-    
-    private func commonInit() {
-        //Load xib by name
-        Bundle.main.loadNibNamed("Layout2", owner: self, options: nil)
+    override func commonInit() {
+        super.commonInit()
         addSubview(contentView)
         contentView.frame = self.bounds
-        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
     
     @IBAction func botViewTap(_ sender: Any) {
-        //changeImage(imageView: botImageView)
+        changeImage(lastTappedImage: 0)
     }
     
     @IBAction func topLeftViewTap(_ sender: Any) {
-        //changeImage(imageView: topLeftImageView)
+        changeImage(lastTappedImage: 1)
     }
     
     @IBAction func topRightViewTap(_ sender: Any) {
-        //changeImage(imageView: topRightImageView)
+        changeImage(lastTappedImage: 2)
+    }
+    
+    
+    @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[.originalImage] as? UIImage {
+            images[lastTappedImage].image = image
+        }
+        picker.dismiss(animated: true, completion: nil)
     }
 }
