@@ -16,19 +16,22 @@ class ImageGridView: UIView {
         }
     }
     
-    // Shows/Hides buttons to match the selected layout
+    // Adds the right layout UIView as a subview
     private func setLayout(_ layout:Layouts) {
+        removeSubviews()
+        var contentView:StandardLayout
         switch layout {
             case .Layout1:
-                removeSubviews()
-                addSubview(Layout1(frame: bounds))
+                contentView = Layout1(frame: bounds)
             case .Layout2:
-                removeSubviews()
-                addSubview(Layout2(frame: bounds))
+                contentView = Layout2(frame: bounds)
             case .Layout3:
-                removeSubviews()
-                addSubview(Layout3(frame: bounds))
+                contentView = Layout3(frame: bounds)
         }
+        contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        contentView.translatesAutoresizingMaskIntoConstraints = true
+        contentView.frame = bounds
+        addSubview(contentView)
     }
     
     //func to remove all subviews in ImageGridView

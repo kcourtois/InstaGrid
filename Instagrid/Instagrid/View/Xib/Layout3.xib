@@ -62,6 +62,8 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="eTp-tK-6K8" secondAttribute="bottom" constant="15" id="ndD-31-tT0"/>
                 <constraint firstItem="tLy-6V-fW9" firstAttribute="width" secondItem="JSl-oH-3i5" secondAttribute="width" id="sh8-uY-CcM"/>
             </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="-38.399999999999999" y="236.58170914542731"/>

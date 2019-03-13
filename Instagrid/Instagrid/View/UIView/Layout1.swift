@@ -9,15 +9,15 @@
 import UIKit
 
 class Layout1: StandardLayout {
-
     @IBOutlet var contentView: UIView!
     @IBOutlet var images:[UIImageView]!
     
     override func commonInit() {
         super.commonInit()
-        addSubview(contentView)
-        contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        contentView.translatesAutoresizingMaskIntoConstraints = true
+        contentView.frame = bounds
+        addSubview(contentView)
         initTapGesures(images: images)
     }
     

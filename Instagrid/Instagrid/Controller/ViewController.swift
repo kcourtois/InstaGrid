@@ -23,12 +23,22 @@ class ViewController: UIViewController {
         imageGridView.layer.shadowColor = UIColor.black.cgColor
         imageGridView.layer.shadowOffset = CGSize(width: 0, height: 2)
         imageGridView.layer.shadowOpacity = 0.8
+        
+        //Sets view to layout 1
+        setLayout(layout: .Layout1)
+        
+        //Create swipe gesture recognizer
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(swipeExport(_:)))
+        swipeUp.direction = .up
+        self.view.addGestureRecognizer(swipeUp)
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeExport(_:)))
+        swipeLeft.direction = .left
+        self.view.addGestureRecognizer(swipeLeft)
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        //Sets view to layout 1
-        //setLayout(layout: .Layout1)
-        
         //Notification observer for didSelectLayout
         let nameSelectNotif = Notification.Name(rawValue: "didSelectLayout")
         NotificationCenter.default.addObserver(self, selector: #selector(onDidSelectLayout(_:)), name: nameSelectNotif, object: nil)
@@ -40,6 +50,92 @@ class ViewController: UIViewController {
     
     override func viewWillLayoutSubviews() {
         updateOrientation()
+    }
+    
+    @objc private func swipeExport(_ sender: UISwipeGestureRecognizer){
+        switch sender.direction {
+        case .up:
+            if UIDevice.current.orientation.isPortrait {
+                imgGridUp()
+            }
+        case .left:
+            if UIDevice.current.orientation.isLandscape {
+                imgGridLeft()
+            }
+        default:
+            break
+        }
+    }
+    
+
+    private func imgGridUp() {
+        UIView.animate(withDuration: 1) {
+            self.imageGridView.transform = CGAffineTransform(translationX: 0, y: -self.view.frame.height)
+        }
+        exportImgGrid()
+    }
+    
+    private func imgGridLeft() {
+        UIView.animate(withDuration: 1) {
+            self.imageGridView.transform = CGAffineTransform(translationX: -self.view.frame.width, y: 0)
+        }
+        exportImgGrid()
+    }
+    
+    private func imgGridAnimCenter() {
+        if UIDevice.current.orientation.isLandscape {
+            self.imageGridView.transform = CGAffineTransform(translationX: -self.view.frame.width, y: 0)
+        } else {
+            self.imageGridView.transform = CGAffineTransform(translationX: 0, y: -self.view.frame.height)
+        }
+        UIView.animate(withDuration: 1) {
+            self.imageGridView.transform = CGAffineTransform(translationX: 0, y: 0)
+        }
+    }
+    
+    //Present view to user for image share
+    private func exportImgGrid() {
+        let items = [getImgGridAsImage()]
+        let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        ac.completionWithItemsHandler = { activity, completed, items, error in
+            if !completed {
+                self.presentShareFailedAlert()
+            }
+            else{
+                self.presentShareSuccessAlert()
+            }
+            self.imgGridAnimCenter()
+        }
+        
+        self.present(ac, animated: true, completion: nil)
+        present(ac, animated: true)
+    }
+    
+    private func presentShareSuccessAlert() {
+        //Initialisation of the alert
+        let alertController = UIAlertController(title: "Share succeeded", message: "Image was shared successfully !", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        //Shows alert
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    private func presentShareFailedAlert() {
+        //Initialisation of the alert
+        let alertController = UIAlertController(title: "Share failed", message: "We were not able to share the image.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        //Shows alert
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    //Convert imgGrid to an image
+    private func getImgGridAsImage() -> UIImage {
+        let renderer = UIGraphicsImageRenderer(size: imageGridView.bounds.size)
+        let image = renderer.image { ctx in
+            imageGridView.drawHierarchy(in: imageGridView.bounds, afterScreenUpdates: true)
+        }
+        return image
     }
     
     //Changes layout for imageGridView and layoutSelectionView
@@ -81,6 +177,7 @@ class ViewController: UIViewController {
         }
     }
     
+    //Present an UIImagePickerController
     private func showImagePicker(delegate:StandardLayout) {
         let image = UIImagePickerController()
         image.sourceType = .photoLibrary
@@ -90,18 +187,14 @@ class ViewController: UIViewController {
         })
     }
     
-    func checkPermission() -> Bool {
+    //Check photo library permission
+    private func checkPermission() -> Bool {
         let photoAuthorizationStatus = PHPhotoLibrary.authorizationStatus()
         switch photoAuthorizationStatus {
         case .authorized:
             return true
         case .notDetermined:
-            PHPhotoLibrary.requestAuthorization({
-                (newStatus) in
-                if newStatus ==  PHAuthorizationStatus.authorized {
-                    
-                }
-            })
+            PHPhotoLibrary.requestAuthorization({ (newStatus) in })
             return checkPermission()
         case .restricted:
             userDidClickButton()
@@ -112,33 +205,24 @@ class ViewController: UIViewController {
         }
     }
     
-    
-    func userDidClickButton() {
-        
-        // initialise a pop up for using later
+    //Shows a popup to access settings if user denied photolibrary permission
+    private func userDidClickButton() {
+        //Initialisation of the alert
         let alertController = UIAlertController(title: "Permission denied", message: "Please go to Settings and turn on the permissions for Photo access.", preferredStyle: .alert)
         let settingsAction = UIAlertAction(title: "Settings", style: .default) { (_) -> Void in
-            guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
-                return
-            }
-            if UIApplication.shared.canOpenURL(settingsUrl) {
-                UIApplication.shared.open(settingsUrl, completionHandler: { (success) in })
+            if let settingsUrl = URL(string: UIApplication.openSettingsURLString) {
+                if UIApplication.shared.canOpenURL(settingsUrl) {
+                    UIApplication.shared.open(settingsUrl, completionHandler: { (success) in })
+                }
             }
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
         alertController.addAction(cancelAction)
         alertController.addAction(settingsAction)
-        
-        // check the permission status
-        switch(CLLocationManager.authorizationStatus()) {
-        case .authorizedAlways, .authorizedWhenInUse:
-            print("Authorized.")
-        case .notDetermined, .restricted, .denied:
-            // redirect the users to settings
-            self.present(alertController, animated: true, completion: nil)
-        }
+
+        //Shows alert
+        self.present(alertController, animated: true, completion: nil)
     }
 
     
 }
-

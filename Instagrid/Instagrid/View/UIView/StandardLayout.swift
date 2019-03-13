@@ -36,6 +36,7 @@ class StandardLayout: UIView, UINavigationControllerDelegate, UIImagePickerContr
         }
     }
     
+    //func triggered when an imageview is tapped. Sends a notification to the viewcontroller
     @objc private func imgViewTapped(sender: UITapGestureRecognizer) {
         if let view = sender.view {
             lastTappedImage = view.tag
@@ -55,4 +56,12 @@ class StandardLayout: UIView, UINavigationControllerDelegate, UIImagePickerContr
         picker.dismiss(animated: true, completion: nil)
     }
     
+}
+
+
+
+extension UIImagePickerController {
+    override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .all
+    }
 }

@@ -55,6 +55,8 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="JSl-oH-3i5" secondAttribute="trailing" constant="15" id="m16-ss-KEw"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="eTp-tK-6K8" secondAttribute="bottom" constant="15" id="ndD-31-tT0"/>
             </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="-38.399999999999999" y="236.58170914542731"/>
