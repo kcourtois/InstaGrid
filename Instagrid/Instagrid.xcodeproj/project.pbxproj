@@ -15,6 +15,7 @@
 		9E016E28222EE4E900DD4FDA /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9E016E26222EE4E900DD4FDA /* Delm-Medium.otf */; };
 		9E016E29222EE4E900DD4FDA /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9E016E27222EE4E900DD4FDA /* ThirstySoftRegular.otf */; };
 		9E370AD0223A5FA200AF9BF3 /* ColorPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E370ACF223A5FA200AF9BF3 /* ColorPickerVC.swift */; };
+		9E370AD2223AA10F00AF9BF3 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E370AD1223AA10F00AF9BF3 /* ColorCell.swift */; };
 		9E83FAF6223128650010AC2A /* ImageGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E83FAF5223128650010AC2A /* ImageGridView.swift */; };
 		9ECDF81222313A30005DE1B1 /* LayoutSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECDF81122313A30005DE1B1 /* LayoutSelectionView.swift */; };
 		9ECDF814223156F6005DE1B1 /* Layouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECDF813223156F6005DE1B1 /* Layouts.swift */; };
@@ -39,6 +40,7 @@
 		9E016E26222EE4E900DD4FDA /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
 		9E016E27222EE4E900DD4FDA /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
 		9E370ACF223A5FA200AF9BF3 /* ColorPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerVC.swift; sourceTree = "<group>"; };
+		9E370AD1223AA10F00AF9BF3 /* ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
 		9E83FAF5223128650010AC2A /* ImageGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGridView.swift; sourceTree = "<group>"; };
 		9ECDF81122313A30005DE1B1 /* LayoutSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutSelectionView.swift; sourceTree = "<group>"; };
 		9ECDF813223156F6005DE1B1 /* Layouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layouts.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				9ECDF8262232CAF9005DE1B1 /* Storyboard */,
 				9ECDF8252232CAE5005DE1B1 /* UIView */,
 				9ECDF81722315D72005DE1B1 /* SwipeStackView.swift */,
+				9E370AD1223AA10F00AF9BF3 /* ColorCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				9ECDF82B22341925005DE1B1 /* StandardLayout.swift in Sources */,
 				9E370AD0223A5FA200AF9BF3 /* ColorPickerVC.swift in Sources */,
 				9E016E17222EDE4900DD4FDA /* MainVC.swift in Sources */,
+				9E370AD2223AA10F00AF9BF3 /* ColorCell.swift in Sources */,
 				9ECDF814223156F6005DE1B1 /* Layouts.swift in Sources */,
 				9ECDF8202231B11D005DE1B1 /* Layout1.swift in Sources */,
 				9E016E15222EDE4900DD4FDA /* AppDelegate.swift in Sources */,

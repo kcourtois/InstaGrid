@@ -165,7 +165,7 @@
                                     <outlet property="swipeLabel" destination="D64-yn-qk3" id="a6f-Vf-FB8"/>
                                 </connections>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhC-lx-Jjm">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhC-lx-Jjm" userLabel="colorPickerButton">
                                 <rect key="frame" x="16" y="186" width="48" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="48" id="jqc-pP-FAR"/>
@@ -301,56 +301,13 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="colorPickerButton" destination="BhC-lx-Jjm" id="D1o-CK-F4U"/>
                         <outlet property="imageGridView" destination="1I1-Ku-aT3" id="VjI-SX-ZY7"/>
                         <outlet property="layoutSelectionView" destination="Xmn-ZA-oqa" id="vv5-0f-MR2"/>
                         <outlet property="swipeStackView" destination="GID-tp-3YL" id="TAl-zG-vfo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="Fdj-4d-NA3">
-                    <rect key="frame" x="0.0" y="0.0" width="183" height="166"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Background Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gD2-ce-j6u">
-                            <rect key="frame" x="15" y="8" width="153" height="28"/>
-                            <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="25"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12s-2t-PgU">
-                            <rect key="frame" x="15" y="41" width="63" height="23"/>
-                            <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="20"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q5E-Qh-LC2">
-                            <rect key="frame" x="88" y="41" width="40" height="20"/>
-                            <color key="backgroundColor" red="0.062745098040000002" green="0.40000000000000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="20" id="kzd-K1-Cdp"/>
-                                <constraint firstAttribute="width" constant="40" id="z00-A3-GZQ"/>
-                            </constraints>
-                        </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick an other color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pio-vj-Ha1">
-                            <rect key="frame" x="26" y="68" width="131" height="23"/>
-                            <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="20"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstItem="Q5E-Qh-LC2" firstAttribute="top" secondItem="12s-2t-PgU" secondAttribute="top" id="95f-Xd-sVX"/>
-                        <constraint firstItem="12s-2t-PgU" firstAttribute="top" secondItem="gD2-ce-j6u" secondAttribute="bottom" constant="5" id="KFN-1o-jAi"/>
-                        <constraint firstItem="pio-vj-Ha1" firstAttribute="centerX" secondItem="Fdj-4d-NA3" secondAttribute="centerX" id="Kei-sI-C7j"/>
-                        <constraint firstItem="12s-2t-PgU" firstAttribute="leading" secondItem="gD2-ce-j6u" secondAttribute="leading" id="N1q-2y-bbb"/>
-                        <constraint firstItem="gD2-ce-j6u" firstAttribute="centerX" secondItem="Fdj-4d-NA3" secondAttribute="centerX" id="PAb-GA-MSO"/>
-                        <constraint firstItem="gD2-ce-j6u" firstAttribute="top" secondItem="FEd-iJ-YUB" secondAttribute="top" constant="8" id="ibF-SQ-PG5"/>
-                        <constraint firstItem="pio-vj-Ha1" firstAttribute="top" secondItem="12s-2t-PgU" secondAttribute="bottom" constant="4" id="o26-YV-eUo"/>
-                        <constraint firstItem="Q5E-Qh-LC2" firstAttribute="leading" secondItem="12s-2t-PgU" secondAttribute="trailing" constant="10" id="pqr-cS-ANm"/>
-                    </constraints>
-                    <viewLayoutGuide key="safeArea" id="FEd-iJ-YUB"/>
-                </view>
             </objects>
             <point key="canvasLocation" x="52" y="24.7376311844078"/>
         </scene>
@@ -371,6 +328,30 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jLU-jw-WT6">
+                                        <rect key="frame" x="8" y="55.5" width="299" height="196.5"/>
+                                        <color key="backgroundColor" red="0.71764705880000002" green="0.84313725490000002" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6fw-25-JDf">
+                                            <size key="itemSize" width="50" height="50"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ColorCell" id="bZT-X4-mjU" customClass="ColorCell" customModule="Instagrid" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </view>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="hWB-ZZ-O1o" id="5v1-jJ-mv2"/>
+                                            <outlet property="delegate" destination="hWB-ZZ-O1o" id="MkP-Bt-6Ag"/>
+                                        </connections>
+                                    </collectionView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZV-7W-PjC">
                                         <rect key="frame" x="0.0" y="260" width="315" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -386,8 +367,12 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.71764705880000002" green="0.84313725490000002" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="jLU-jw-WT6" secondAttribute="trailing" constant="8" id="28e-9y-xwl"/>
                                     <constraint firstAttribute="bottom" secondItem="fZV-7W-PjC" secondAttribute="bottom" id="5cb-ZR-cEI"/>
+                                    <constraint firstItem="jLU-jw-WT6" firstAttribute="leading" secondItem="WJn-4h-OAd" secondAttribute="leading" constant="8" id="8Dh-aJ-feX"/>
+                                    <constraint firstItem="fZV-7W-PjC" firstAttribute="top" secondItem="jLU-jw-WT6" secondAttribute="bottom" constant="8" id="9jp-Dt-pZm"/>
                                     <constraint firstItem="Ik7-3z-K5H" firstAttribute="top" secondItem="WJn-4h-OAd" secondAttribute="top" constant="15" id="R5L-q0-DwS"/>
+                                    <constraint firstItem="jLU-jw-WT6" firstAttribute="top" secondItem="Ik7-3z-K5H" secondAttribute="bottom" constant="8" id="fff-7X-Cj3"/>
                                     <constraint firstItem="Ik7-3z-K5H" firstAttribute="centerX" secondItem="WJn-4h-OAd" secondAttribute="centerX" id="nGI-DP-mWG"/>
                                     <constraint firstItem="fZV-7W-PjC" firstAttribute="leading" secondItem="WJn-4h-OAd" secondAttribute="leading" id="sQU-8W-WLn"/>
                                     <constraint firstAttribute="trailing" secondItem="fZV-7W-PjC" secondAttribute="trailing" id="ucO-w5-lu8"/>
@@ -404,6 +389,7 @@
                         <viewLayoutGuide key="safeArea" id="fBC-Az-a1u"/>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="jLU-jw-WT6" id="4Br-AS-fdq"/>
                         <outlet property="pickerView" destination="WJn-4h-OAd" id="6DV-Ra-39r"/>
                     </connections>
                 </viewController>

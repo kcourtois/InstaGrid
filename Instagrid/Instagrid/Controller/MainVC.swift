@@ -14,6 +14,7 @@ class MainVC: UIViewController {
     @IBOutlet weak var imageGridView: ImageGridView!
     @IBOutlet weak var layoutSelectionView: LayoutSelectionView!
     @IBOutlet weak var swipeStackView: SwipeStackView!
+    @IBOutlet weak var colorPickerButton: UIButton!
     private var imageView:UIImageView = UIImageView()
     
     override func viewDidLoad() {
@@ -70,6 +71,7 @@ class MainVC: UIViewController {
     private func imgGridUp() {
         UIView.animate(withDuration: 1) {
             self.imageGridView.transform = CGAffineTransform(translationX: 0, y: -self.view.frame.height)
+            self.colorPickerButton.transform = CGAffineTransform(translationX: 0, y: -self.view.frame.height)
         }
         exportImgGrid()
     }
@@ -78,6 +80,7 @@ class MainVC: UIViewController {
     private func imgGridLeft() {
         UIView.animate(withDuration: 1) {
             self.imageGridView.transform = CGAffineTransform(translationX: -self.view.frame.width, y: 0)
+            self.colorPickerButton.transform = CGAffineTransform(translationX: -self.view.frame.width, y: 0)
         }
         exportImgGrid()
     }
@@ -86,11 +89,14 @@ class MainVC: UIViewController {
     private func imgGridAnimCenter() {
         if UIDevice.current.orientation.isLandscape {
             self.imageGridView.transform = CGAffineTransform(translationX: -self.view.frame.width, y: 0)
+            self.colorPickerButton.transform = CGAffineTransform(translationX: -self.view.frame.width, y: 0)
         } else {
             self.imageGridView.transform = CGAffineTransform(translationX: 0, y: -self.view.frame.height)
+            self.colorPickerButton.transform = CGAffineTransform(translationX: 0, y: -self.view.frame.height)
         }
         UIView.animate(withDuration: 1) {
             self.imageGridView.transform = CGAffineTransform(translationX: 0, y: 0)
+            self.colorPickerButton.transform = CGAffineTransform(translationX: 0, y: 0)
         }
     }
     
