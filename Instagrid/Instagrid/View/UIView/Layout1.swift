@@ -9,22 +9,11 @@
 import UIKit
 
 class Layout1: StandardLayout {
-    @IBOutlet var contentView: UIView!
+    
     @IBOutlet var images:[UIImageView]!
     
     override func commonInit() {
         super.commonInit()
-        contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        contentView.translatesAutoresizingMaskIntoConstraints = true
-        contentView.frame = bounds
-        addSubview(contentView)
-        initTapGesures(images: images)
-    }
-    
-    @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let image = info[.originalImage] as? UIImage {
-            images[lastTappedImage].image = image
-        }
-        picker.dismiss(animated: true, completion: nil)
+        imageViews = images
     }
 }

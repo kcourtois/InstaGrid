@@ -11,6 +11,7 @@ import UIKit
 class StandardLayout: UIView, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     //Index for last tapped imageView
     var lastTappedImage = 0
+    var imageViews = [UIImageView]()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,7 +26,13 @@ class StandardLayout: UIView, UINavigationControllerDelegate, UIImagePickerContr
     //Initalisation of the xib
     func commonInit() {
         //Load xib by name
-        Bundle.main.loadNibNamed(selfName(), owner: self, options: nil)
+        let contentView = Bundle.main.loadNibNamed(selfName(), owner: self, options: nil)?.first as? UIView ?? UIView()
+        contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        contentView.translatesAutoresizingMaskIntoConstraints = true
+        contentView.frame = bounds
+        addSubview(contentView)
+        
+        initTapGesures(images: imageViews)
     }
     
     //Adds tap gestures to imageViews in array
@@ -43,6 +50,13 @@ class StandardLayout: UIView, UINavigationControllerDelegate, UIImagePickerContr
             let name = Notification.Name(rawValue: "didTapImage")
             NotificationCenter.default.post(name: name, object: nil, userInfo: ["layout": self])
         }
+    }
+    
+    @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[.originalImage] as? UIImage {
+            imageViews[lastTappedImage].image = image
+        }
+        picker.dismiss(animated: true, completion: nil)
     }
     
     //Get class name and turn it to a string

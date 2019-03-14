@@ -15,7 +15,6 @@ class MainVC: UIViewController {
     @IBOutlet weak var layoutSelectionView: LayoutSelectionView!
     @IBOutlet weak var swipeStackView: SwipeStackView!
     @IBOutlet weak var colorPickerButton: UIButton!
-    private var imageView:UIImageView = UIImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -115,7 +114,6 @@ class MainVC: UIViewController {
         }
         
         self.present(ac, animated: true, completion: nil)
-        present(ac, animated: true)
     }
     
     //Alert for share success

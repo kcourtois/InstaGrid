@@ -12,7 +12,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Layout2" customModule="Instagrid" customModuleProvider="target">
             <connections>
-                <outlet property="contentView" destination="iN0-l3-epB" id="NOU-Qz-88D"/>
                 <outletCollection property="images" destination="eTp-tK-6K8" collectionClass="NSMutableArray" id="ZJo-FE-Rce"/>
                 <outletCollection property="images" destination="YcL-4M-pwd" collectionClass="NSMutableArray" id="B4a-Vc-WWt"/>
                 <outletCollection property="images" destination="Ah3-6q-jx7" collectionClass="NSMutableArray" id="FT0-70-Bvl"/>
