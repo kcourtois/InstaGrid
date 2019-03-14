@@ -58,8 +58,6 @@ class StandardLayout: UIView, UINavigationControllerDelegate, UIImagePickerContr
     
 }
 
-
-
 extension UIImagePickerController {
     override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .all

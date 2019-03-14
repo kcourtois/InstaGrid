@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageGridView: ImageGridView!
     @IBOutlet weak var layoutSelectionView: LayoutSelectionView!
     @IBOutlet weak var swipeStackView: SwipeStackView!
-    
     private var imageView:UIImageView = UIImageView()
     
     override func viewDidLoad() {
@@ -35,7 +34,6 @@ class ViewController: UIViewController {
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeExport(_:)))
         swipeLeft.direction = .left
         self.view.addGestureRecognizer(swipeLeft)
-
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -52,6 +50,7 @@ class ViewController: UIViewController {
         updateOrientation()
     }
     
+    //Selector for swipe gestures to export images
     @objc private func swipeExport(_ sender: UISwipeGestureRecognizer){
         switch sender.direction {
         case .up:
@@ -67,7 +66,7 @@ class ViewController: UIViewController {
         }
     }
     
-
+    //Animation for the imageGrid, goes up and calls export
     private func imgGridUp() {
         UIView.animate(withDuration: 1) {
             self.imageGridView.transform = CGAffineTransform(translationX: 0, y: -self.view.frame.height)
@@ -75,6 +74,7 @@ class ViewController: UIViewController {
         exportImgGrid()
     }
     
+    //Animation for the imageGrid, goes left and calls export
     private func imgGridLeft() {
         UIView.animate(withDuration: 1) {
             self.imageGridView.transform = CGAffineTransform(translationX: -self.view.frame.width, y: 0)
@@ -82,6 +82,7 @@ class ViewController: UIViewController {
         exportImgGrid()
     }
     
+    //Animates imageGrid back to it's initial position. Handles rotation to have a coherent anim.
     private func imgGridAnimCenter() {
         if UIDevice.current.orientation.isLandscape {
             self.imageGridView.transform = CGAffineTransform(translationX: -self.view.frame.width, y: 0)
@@ -111,6 +112,7 @@ class ViewController: UIViewController {
         present(ac, animated: true)
     }
     
+    //Alert for share success
     private func presentShareSuccessAlert() {
         //Initialisation of the alert
         let alertController = UIAlertController(title: "Share succeeded", message: "Image was shared successfully !", preferredStyle: .alert)
@@ -120,6 +122,7 @@ class ViewController: UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
+    //Alert for share fail
     private func presentShareFailedAlert() {
         //Initialisation of the alert
         let alertController = UIAlertController(title: "Share failed", message: "We were not able to share the image.", preferredStyle: .alert)
@@ -194,19 +197,19 @@ class ViewController: UIViewController {
         case .authorized:
             return true
         case .notDetermined:
-            PHPhotoLibrary.requestAuthorization({ (newStatus) in })
+            PHPhotoLibrary.requestAuthorization { status in }
             return checkPermission()
         case .restricted:
-            userDidClickButton()
+            presentPermissionDeniedAlert()
             return false
         case .denied:
-            userDidClickButton()
+            presentPermissionDeniedAlert()
             return false
         }
     }
     
     //Shows a popup to access settings if user denied photolibrary permission
-    private func userDidClickButton() {
+    private func presentPermissionDeniedAlert() {
         //Initialisation of the alert
         let alertController = UIAlertController(title: "Permission denied", message: "Please go to Settings and turn on the permissions for Photo access.", preferredStyle: .alert)
         let settingsAction = UIAlertAction(title: "Settings", style: .default) { (_) -> Void in
@@ -219,7 +222,6 @@ class ViewController: UIViewController {
         let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
         alertController.addAction(cancelAction)
         alertController.addAction(settingsAction)
-
         //Shows alert
         self.present(alertController, animated: true, completion: nil)
     }
