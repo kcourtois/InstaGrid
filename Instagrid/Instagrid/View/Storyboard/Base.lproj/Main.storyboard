@@ -18,10 +18,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,9 +165,12 @@
                                     <outlet property="swipeLabel" destination="D64-yn-qk3" id="a6f-Vf-FB8"/>
                                 </connections>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhC-lx-Jjm">
-                                <rect key="frame" x="16" y="181" width="48" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhC-lx-Jjm">
+                                <rect key="frame" x="16" y="186" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="jqc-pP-FAR"/>
+                                    <constraint firstAttribute="height" constant="48" id="zjJ-DS-lJC"/>
+                                </constraints>
                                 <state key="normal" image="paintPalette"/>
                                 <connections>
                                     <segue destination="hWB-ZZ-O1o" kind="presentation" id="jcr-Kp-Ii2"/>
@@ -188,6 +191,7 @@
                                 <variation key="heightClass=compact" constant="-103"/>
                             </constraint>
                             <constraint firstItem="1I1-Ku-aT3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="D4f-pQ-Q21"/>
+                            <constraint firstItem="1I1-Ku-aT3" firstAttribute="top" secondItem="BhC-lx-Jjm" secondAttribute="bottom" constant="-30" id="GjP-tW-EtN"/>
                             <constraint firstAttribute="top" secondItem="1I1-Ku-aT3" secondAttribute="top" constant="232" id="JWz-4U-iDT">
                                 <variation key="heightClass=compact" constant="-10"/>
                             </constraint>
@@ -196,6 +200,7 @@
                             </constraint>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xmn-ZA-oqa" secondAttribute="bottom" id="Ng9-VR-pv4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xmn-ZA-oqa" secondAttribute="trailing" constant="30" id="P0r-GG-gZW"/>
+                            <constraint firstItem="1I1-Ku-aT3" firstAttribute="leading" secondItem="BhC-lx-Jjm" secondAttribute="trailing" constant="-34" id="dKN-pX-dfK"/>
                             <constraint firstItem="Xmn-ZA-oqa" firstAttribute="top" secondItem="1I1-Ku-aT3" secondAttribute="bottom" id="djL-ky-7Gi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1I1-Ku-aT3" secondAttribute="bottom" priority="250" constant="95" id="dmp-sz-PZI"/>
                             <constraint firstItem="1I1-Ku-aT3" firstAttribute="top" secondItem="GID-tp-3YL" secondAttribute="bottom" constant="5" id="fWL-fA-lGf"/>

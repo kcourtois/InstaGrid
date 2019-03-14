@@ -19,6 +19,9 @@ class ColorPickerVC: UIViewController {
         self.pickerView.layer.masksToBounds = true
     }
     @IBAction func closePopUp() {
+        if let presenter = presentingViewController as? MainVC {
+            
+        }
         dismiss(animated: true, completion: nil)
     }
 }

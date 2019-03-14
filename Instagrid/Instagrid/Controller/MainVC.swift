@@ -9,7 +9,7 @@
 import UIKit
 import Photos
 
-class ViewController: UIViewController {
+class MainVC: UIViewController {
 
     @IBOutlet weak var imageGridView: ImageGridView!
     @IBOutlet weak var layoutSelectionView: LayoutSelectionView!
@@ -225,6 +225,4 @@ class ViewController: UIViewController {
         //Shows alert
         self.present(alertController, animated: true, completion: nil)
     }
-
-    
 }
