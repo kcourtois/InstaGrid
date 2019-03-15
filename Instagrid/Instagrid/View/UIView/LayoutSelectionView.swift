@@ -50,7 +50,7 @@ class LayoutSelectionView: UIView {
     }
     
     private func postNotification(layout:Layouts) {
-        let name = Notification.Name(rawValue: "didSelectLayout")
-        NotificationCenter.default.post(name: name, object: nil, userInfo: ["layout": layout])
+        let name = Notification.Name(rawValue: NotificationStrings.didSelectLayoutNotificationName)
+        NotificationCenter.default.post(name: name, object: nil, userInfo: [NotificationStrings.didSelectLayoutParameterKey: layout])
     }
 }

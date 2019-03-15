@@ -31,13 +31,11 @@ class StandardLayout: UIView, UINavigationControllerDelegate, UIImagePickerContr
         contentView.translatesAutoresizingMaskIntoConstraints = true
         contentView.frame = bounds
         addSubview(contentView)
-        
-        initTapGesures(images: imageViews)
     }
     
     //Adds tap gestures to imageViews in array
-    func initTapGesures(images:[UIImageView]) {
-        for imageView in images {
+    func initTapGesures() {
+        for imageView in imageViews {
             let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imgViewTapped(sender:)))
             imageView.addGestureRecognizer(tapGestureRecognizer)
         }
@@ -47,8 +45,8 @@ class StandardLayout: UIView, UINavigationControllerDelegate, UIImagePickerContr
     @objc private func imgViewTapped(sender: UITapGestureRecognizer) {
         if let view = sender.view {
             lastTappedImage = view.tag
-            let name = Notification.Name(rawValue: "didTapImage")
-            NotificationCenter.default.post(name: name, object: nil, userInfo: ["layout": self])
+            let name = Notification.Name(rawValue: NotificationStrings.didTapImageNotificationName)
+            NotificationCenter.default.post(name: name, object: nil, userInfo: [NotificationStrings.didTapImageParameterKey: self])
         }
     }
     
@@ -68,6 +66,17 @@ class StandardLayout: UIView, UINavigationControllerDelegate, UIImagePickerContr
     //Handles the picker dismiss when user taps Cancel
     @objc func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
+    }
+    
+    //Returns false if all images are not filled by the user
+    func isImageGridFilled() -> Bool {
+        var imagesFilled = true
+        for imageView in imageViews {
+            if imageView.image == #imageLiteral(resourceName: "Plus") {
+                imagesFilled = false
+            }
+        }
+        return imagesFilled
     }
     
 }

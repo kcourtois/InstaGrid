@@ -9,17 +9,30 @@
 import UIKit
 
 class ImageGridView: UIView {
-    
+    //contains an enum to select current layout
     var layout:Layouts = .Layout1 {
         didSet {
             setLayout(layout)
         }
     }
     
+    //stores the current contentView.
+    var contentView:StandardLayout? = nil
+    
+    //Returns true if images were picked by user
+    var isImageGridFilled:Bool {
+        if let theView = contentView {
+            return theView.isImageGridFilled()
+        }
+        else {
+            return false
+        }
+    }
+    
+    
     // Adds the right layout UIView as a subview
     private func setLayout(_ layout:Layouts) {
         removeSubviews()
-        var contentView:StandardLayout
         switch layout {
             case .Layout1:
                 contentView = Layout1(frame: bounds)
@@ -28,10 +41,13 @@ class ImageGridView: UIView {
             case .Layout3:
                 contentView = Layout3(frame: bounds)
         }
-        contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        contentView.translatesAutoresizingMaskIntoConstraints = true
-        contentView.frame = bounds
-        addSubview(contentView)
+        //Unwrap of the contentView to add it to the imageGridView
+        if let theView = contentView {
+            theView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            theView.translatesAutoresizingMaskIntoConstraints = true
+            theView.frame = bounds
+            addSubview(theView)
+        }
     }
     
     //func to remove all subviews in ImageGridView

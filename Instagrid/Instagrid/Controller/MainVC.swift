@@ -38,11 +38,11 @@ class MainVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         //Notification observer for didSelectLayout
-        let nameSelectNotif = Notification.Name(rawValue: "didSelectLayout")
+        let nameSelectNotif = Notification.Name(rawValue: NotificationStrings.didSelectLayoutNotificationName)
         NotificationCenter.default.addObserver(self, selector: #selector(onDidSelectLayout(_:)), name: nameSelectNotif, object: nil)
         
         //Notification observer for didTapImage
-        let nameTapImageNotif = Notification.Name(rawValue: "didTapImage")
+        let nameTapImageNotif = Notification.Name(rawValue: NotificationStrings.didTapImageNotificationName)
         NotificationCenter.default.addObserver(self, selector: #selector(onDidTapImage(_:)), name: nameTapImageNotif, object: nil)
     }
     
@@ -52,17 +52,22 @@ class MainVC: UIViewController {
     
     //Selector for swipe gestures to export images
     @objc private func swipeExport(_ sender: UISwipeGestureRecognizer){
-        switch sender.direction {
-        case .up:
-            if UIDevice.current.orientation.isPortrait {
-                imgGridUp()
+        if(imageGridView.isImageGridFilled){
+            switch sender.direction {
+            case .up:
+                if UIDevice.current.orientation.isPortrait {
+                    imgGridUp()
+                }
+            case .left:
+                if UIDevice.current.orientation.isLandscape {
+                    imgGridLeft()
+                }
+            default:
+                break
             }
-        case .left:
-            if UIDevice.current.orientation.isLandscape {
-                imgGridLeft()
-            }
-        default:
-            break
+        }
+        else {
+            self.presentAlert(title: "Images not picked", message: "Please, pick your images before sharing.")
         }
     }
     
@@ -105,10 +110,10 @@ class MainVC: UIViewController {
         let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
         ac.completionWithItemsHandler = { activity, completed, items, error in
             if !completed {
-                self.presentShareFailedAlert()
+                self.presentAlert(title: "Share failed", message: "We were not able to share the image.")
             }
             else{
-                self.presentShareSuccessAlert()
+                self.presentAlert(title: "Share succeeded", message: "Image was shared successfully !")
             }
             self.imgGridAnimCenter()
         }
@@ -116,20 +121,10 @@ class MainVC: UIViewController {
         self.present(ac, animated: true, completion: nil)
     }
     
-    //Alert for share success
-    private func presentShareSuccessAlert() {
+    //Presents an UIAlertController with a "OK" button to show a message.
+    private func presentAlert(title:String, message:String) {
         //Initialisation of the alert
-        let alertController = UIAlertController(title: "Share succeeded", message: "Image was shared successfully !", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
-        alertController.addAction(okAction)
-        //Shows alert
-        self.present(alertController, animated: true, completion: nil)
-    }
-    
-    //Alert for share fail
-    private func presentShareFailedAlert() {
-        //Initialisation of the alert
-        let alertController = UIAlertController(title: "Share failed", message: "We were not able to share the image.", preferredStyle: .alert)
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alertController.addAction(okAction)
         //Shows alert

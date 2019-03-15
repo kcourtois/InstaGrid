@@ -15,5 +15,6 @@ class Layout2: StandardLayout {
     override func commonInit() {
         super.commonInit()
         imageViews = images
+        initTapGesures()
     }
 }
